@@ -1,20 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const { getProjects, createProject, updateProject, deleteProject } = require("../controllers/projectController");
 
-router.get("/", (req, res) => {
-  res.status(200).json({ message: "Projects fetched successfully!" });
-});
-
-router.post("/", (req, res) => {
-  res.status(200).json({ message: "Project created successfully!" });
-});
-
-router.put("/:id", (req, res) => {
-  res.status(200).json({ message: `Project ${req.params.id} updated successfully!` });
-});
-
-router.delete("/:id", (req, res) => {
-  res.status(200).json({ message: `Project ${req.params.id} deleted successfully!` });
-});
+router.route("/").get(getProjects).post(createProject);
+router.route("/:id").put(updateProject).delete(deleteProject);
 
 module.exports = router;
