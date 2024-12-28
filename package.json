@@ -1,0 +1,29 @@
+{
+  "name": "project-planner",
+  "version": "1.0.0",
+  "description": "project planning application for learning purposes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MNlegion/project-planner.git"
+  },
+  "author": "MNlegion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MNlegion/project-planner/issues"
+  },
+  "homepage": "https://github.com/MNlegion/project-planner#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
